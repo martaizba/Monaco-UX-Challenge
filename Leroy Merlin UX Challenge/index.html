@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Mónaco</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <i class="fas fa-shopping-cart"></i>
+        </ul>
+    </nav>
+
+    <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img src="img/uni1.avif">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="img/uni1.avif" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/uni2.avif" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/uni3.jpeg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/uni4.avif" onclick="showImg(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="url">Home > Piscina > Accesorios </div>
+            <div class="pname">Flotador de unicornio</div>
+            <p class="product-description">Flotador de unicornio muy bonito perfecto para piscina</p>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">15,30€</div>
+            <div class="size">
+                <p>Tamaño:</p>
+                <div class="psize active">S</div>
+                <div class="psize">M</div>
+                <div class="psize">L</div>
+                <div class="psize">XL</div>
+            </div>
+            <div class="quantity">
+                <p>Cantidad :</p>
+                <input type="number" min="1" max="99" value="1">
+            </div>
+            <div class="btn-box">
+                <button class="cart-btn">Añadir al carrito</button>
+                <button class="buy-btn">Compra</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let bigImg = document.querySelector('.big-img img');
+        function showImg(pic){
+            bigImg.src = pic;
+        }
+    </script>
+</body>
+</html>
